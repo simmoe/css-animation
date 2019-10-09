@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
+*{
+    box-sizing:border-box;
+}
+html, body, h1, h2, h3, h4, h5, h6, p, div, span{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+    box-sizing:border-box;
+}
+
+main{
+    height:100vh;
+    background:#eee;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+#circle{
+    margin-bottom:200px;
+    width:100px;
+    height:100px;
+}
+
+article{
+    transition:1s ease;
+    transform-origin:center center;
+    transform-origin:left top;
+}
+#circle:hover ~ article{
+    transform: scale(1.2);
+    transform: scaleY(1.5);
+    transform: scaleX(1.5);
+    transform: translateX(100px);
+    transform: rotate(1turn);
+    transform: rotate(4turn);
+    transform: skewY(20deg);
+    transform: skewX(20deg);
+    transform: rotateX(.5turn);
+    transform: rotateY(.5turn);
+    transform: rotateX(90deg);
+    transform: rotateY(90deg);
+}
+

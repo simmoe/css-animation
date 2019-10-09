@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
+*{
+    box-sizing:border-box;
+}
+html, body, h1, h2, h3, h4, h5, h6, p, div, span{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+    box-sizing:border-box;
+}
+
+main{
+    height:100vh;
+    background:#eee;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+article{
+    animation-name: basic;
+    animation-name: basicPercent;
+    animation-name: moveElement;
+    animation-duration: 4s;
+    animation-delay:2s;
+
+    /* KEEP VALUES OR GO BACK */
+    animation-fill-mode: forwards;
+
+    /* MORE TIMES OR INFINITE */
+    /* animation-iteration-count: 3; */
+    /* animation-iteration-count: infinite; */
+
+    /* TIMING AND FILTERING */
+    animation-timing-function: linear;
+    animation-timing-function: ease;
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
+
+    /* SHORTHAND */
+    animation: moveElement 5s linear 1s infinite alternate;
+
+}
+
+@keyframes basic{
+    from {color: black;}
+    to {color: gray;}
+}
+
+@keyframes basicPercent {
+    0%   {color: black;}
+    50%  {color: white;}
+    100% {color: black;}
+  }
+
+@keyframes moveElement {
+    0%   {transform:translateX(0px)}
+    50%  {transform:translateX(-50px)}
+    100% {transform:translateX(0px)}
+}
+
+h1{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+}
+@keyframes eachLetter{
+    from { width: 0 }
+    to { width: 100% }
+}

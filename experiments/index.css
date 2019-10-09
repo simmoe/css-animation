@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
+
+* {
+    font-family: 'Open Sans';
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+main {
+    width:100vw;
+    height:100vh;
+    padding:16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-template-rows:repeat(5, 1fr);
+    gap:4px 4px;
+}
+
+.item{
+    background-color:rosybrown;
+    border-radius:4px;
+    padding:16px;
+    cursor: pointer;
+    text-align: center;
+}
+.item label{
+    width:100%;
+    height:100%;
+}
+
+#cb{
+    display:none;
+}
+#cb:checked ~ .movable{
+    transition:2s;
+}
+#cb:checked ~ .transition {
+    background-color:salmon;
+}
+#cb:checked ~ .transition::before {
+    content:"Transition on";
+}
+
+.rotate:hover ~ .movable{
+    transform:rotate(1.2turn);
+}
+
+.translate:hover ~ .movable{
+    transform:translate(100px, 100px);
+}
+
+.transform-translate:hover ~ .movable{
+    transform: rotate(90deg) translateX(200px);
+}
+
+.transition-transform-rotate:hover ~ .movable{
+    transform: rotate(1turn);
+}
+.transition-transform-rotate-translate:hover ~ .movable{
+    transform: rotate(1turn) translateX(50%);
+}
+.transition {
+    background-color:steelblue;
+}
+.transition::before{
+    content:"Transition off";
+}
+.movable {
+    background-color:teal;
+    color:white;
+    grid-column:2/4;
+    grid-row:3/3;
+}
+
+.transition, .movable{
+    color:white;
+}
+
+
+

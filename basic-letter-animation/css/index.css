@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: "Open Sans";
+    text-align:center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    margin-top:48vh;
+    animation: eachLetter 3.5s steps(32, end)
+}
+
+/* The typing effect */
+@keyframes eachLetter {
+    from { width: 0; }
+    to { width: 100% }
+  }
