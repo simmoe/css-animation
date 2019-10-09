@@ -1,6 +1,9 @@
 /* 
 	Weight axis: 100 – 700
-	Width axis: 85 – 100
+    Width axis: 85 – 100
+    
+    Inspired by this cool article: 
+    https://css-irl.info/variable-font-animation-with-css-and-splitting-js/
 */
 @font-face {
 	font-family: "IBM Plex Sans Roman";
