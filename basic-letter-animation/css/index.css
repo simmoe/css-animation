@@ -15,8 +15,21 @@ h1{
     animation: eachLetter 3.5s steps(32, end)
 }
 
+h1::after{
+    content: "|";
+    overflow:visible;
+    animation: bling 1s linear infinite;
+}
+
 /* The typing effect */
 @keyframes eachLetter {
     from { width: 0; }
     to { width: 100% }
+  }
+
+  @keyframes bling{
+    0% {color:black}
+    50% {color:black}
+    51% {color:white;}
+    100% {color:white;}
   }

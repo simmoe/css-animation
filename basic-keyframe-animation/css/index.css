@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
-*{
-    box-sizing:border-box;
-}
-html, body, h1, h2, h3, h4, h5, h6, p, div, span{
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, main, header, footer, article, section{
     margin:0;
     padding:0;
-    font-family:Arial;
-    box-sizing:border-box;
+    font-family:'Open Sans';
+}
+*{
+    box-sizing: border-box;
 }
 
 main{
@@ -59,15 +58,4 @@ article{
     0%   {transform:translateX(0px)}
     50%  {transform:translateX(-50px)}
     100% {transform:translateX(0px)}
-}
-
-h1{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-}
-@keyframes eachLetter{
-    from { width: 0 }
-    to { width: 100% }
 }

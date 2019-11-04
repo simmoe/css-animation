@@ -26,15 +26,20 @@ main{
 
 article{
     transition:1s ease;
-    transform-origin:center center;
-    transform-origin:left top;
 }
 #circle:hover ~ article{
     transform: scale(1.2);
+    transform-origin: center;
+    /* transform-origin: x-axis y-axis z-axis|initial|inherit; */
+    transform-origin: right bottom;
+    
     transform: scaleY(1.5);
     transform: scaleX(1.5);
     transform: translateX(100px);
     transform: rotate(1turn);
+    
+    transform-origin: center;
+
     transform: rotate(4turn);
     transform: skewY(20deg);
     transform: skewX(20deg);
