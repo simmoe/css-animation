@@ -1,0 +1,122 @@
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, main, header, footer, article, section{
+    margin:0;
+    padding:0;
+    font-family:Arial, 'Open Sans';
+}
+*{
+    box-sizing: border-box;
+}
+
+/* Challenges */
+
+/* See if you can make a page... 
+
+with a circle and a headline - when you hover on the circle, the headline animates to the right of the page
+
+*/
+
+main {
+    display:grid;
+    justify-content:end;
+    align-items:center;
+    grid-template-rows: repeat(5, 1fr);
+    padding:20px;
+    height:100vh;
+    width:100vw;
+}
+section{
+    position:fixed;
+    transition:.9s ease-in-out;
+    display:grid;
+    place-items:center;
+    z-index:-1;
+}
+section h1{
+    color:white;
+    font-size: 0vh;
+    font-weight:300;
+    font-size:8vh;
+
+    transform:rotateX(90deg);
+
+}
+section.left{
+    top:0;
+    left:-40vw;
+    background-color: #4285F4;
+    width:40vw;
+    height:100vh;
+}
+section.bottom{
+    width:100vw;
+    height:20vh;
+    background-color:black;
+    bottom:-20vh;    
+    left:0;
+}
+section.right{
+    width:0;
+    height:100vh;
+    background-color:orangered;
+    top:0;
+    right:0;    
+}
+section.top{
+    width:100vw;
+    height:100vh;
+    background-color:forestgreen;
+    top:0;
+    right:0;    
+    opacity:0;
+}
+
+.left-menu circle{
+    fill: #4285F4;
+}
+.right-menu circle{
+    fill: orange;
+}
+.top-menu circle{
+    fill: green;
+}
+.left-menu:hover ~ .sections section.left {
+    left:0;
+}
+.bottom-menu:hover ~ .sections section.bottom {
+    transform:translateY(-20vh);
+}
+.right-menu:hover ~ .sections section.right {
+    width:30vw;
+}
+.top-menu:hover ~ .sections section.top {
+    opacity:1;
+}
+
+.all-menu:hover ~ .sections section.top {
+    opacity:1;
+    z-index:-2;
+}
+.all-menu:hover ~ .sections section.right {
+    width:30vw;
+}
+.all-menu:hover ~ .sections section.bottom {
+    transform:translateY(-20vh);
+}
+.all-menu:hover ~ .sections section.left {
+    left:0;
+}
+
+svg:hover ~ .sections section h1{
+    animation: slide .9s 1s forwards;
+}
+
+@keyframes slide{
+    0% {
+        transform:rotateX(90deg);
+    }
+    100% {
+        transform:rotateX(0deg);        
+    }
+}
+
+
