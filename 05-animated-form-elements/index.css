@@ -70,6 +70,9 @@ section{
     color:#fff;
 }
 .shopping{
+    display:grid;
+    justify-content: left;
+    position:relative;
 }
 
 .shopping .card{
@@ -78,21 +81,23 @@ section{
     background-size:60px;
     background-repeat:no-repeat;
     background-position:18px center;
-    border-radius:50%;
+    border-radius: 45px 45px 45px 45px;
     width:91px;
     height:91px;
-    transform-origin: left;
+    transition:.3s ease;
+    margin-left:100px;
+
+    display: grid;
+    justify-content:right;
 }
 .shopping .card:hover{
-    animation:right 1s;
+    width:300px;
+}
+.shopping .card:hover::after{
+    content: "Add to card";
+    position:absolute;
+    color:white;
+    font-size:1.7rem;
+    font-weight:500;
 }
 
-@keyframes right{
-    from{
-        width:91px;
-    }
-    to{
-        width:300px;
-        border-radius: 45px 45px 45px 45px;
-    }
-}
