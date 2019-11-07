@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+html, body, h1, h2, h3, h4, h5, h6, p, div, span, main, header, footer, article, section{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+
+main {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding:20px;
+    width:100vw;
+    gap:1rem;
+}
+
+section{
+    display: grid;
+    place-items:center;
+    min-height:200px;
+    border:1px solid #ccc;
+}
+
+.button button{
+    background-color:#1592E6;
+    color:#fff;
+    font-size:2rem;
+    font-weight:400;
+    padding:1rem 1.5rem 1rem 1.5rem;
+    border:none;
+    border-radius:2rem;
+}
+.button button:hover{
+    background-color:#4EB8FF;
+    cursor: pointer;
+}
+
+.radios{
+    display:grid;
+    grid-template-columns: repeat(3, 138px);
+    justify-content: center;
+}
+.radios input {
+    display:none;
+}
+.radios label{
+    font-size:1.5rem;
+    font-weight:400;
+    color:#606060;
+    background-color:#F5F5F5;
+    padding:1rem 1.5rem 1rem 1.5rem;
+    min-width:138px;
+    text-align:center;
+    border:1px solid #ddd;
+}
+.radios label:first-of-type{
+    border-radius: 25px 0 0 25px;
+}
+.radios label:last-of-type{
+    border-radius: 0 25px 25px 0;
+}
+
+.radios input:checked + label {
+    background-color:#1592E6;
+    color:#fff;
+}
+.shopping{
+}
+
+.shopping .card{
+    background: url('./img/add_shopping_cart-24px.svg');
+    background-color: #1592E6;
+    background-size:60px;
+    background-repeat:no-repeat;
+    background-position:18px center;
+    border-radius:50%;
+    width:91px;
+    height:91px;
+    transform-origin: left;
+}
+.shopping .card:hover{
+    animation:right 1s;
+}
+
+@keyframes right{
+    from{
+        width:91px;
+    }
+    to{
+        width:300px;
+        border-radius: 45px 45px 45px 45px;
+    }
+}
