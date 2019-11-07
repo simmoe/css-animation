@@ -88,7 +88,6 @@ section{
     margin-left:100px;
 
     display: grid;
-    justify-content:right;
 }
 .shopping .card:hover{
     width:300px;
@@ -96,6 +95,7 @@ section{
 .shopping .card:hover::after{
     content: "Add to card";
     position:absolute;
+    left:110px;
     color:white;
     font-size:1.7rem;
     font-weight:500;
