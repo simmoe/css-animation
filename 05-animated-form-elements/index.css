@@ -69,6 +69,9 @@ section{
     background-color:#1592E6;
     color:#fff;
 }
+.radios label:hover{
+    cursor:pointer;
+}
 .shopping{
     display:grid;
     justify-content: left;
@@ -76,28 +79,29 @@ section{
 }
 
 .shopping .card{
-    background: url('./img/add_shopping_cart-24px.svg');
     background-color: #1592E6;
-    background-size:60px;
-    background-repeat:no-repeat;
-    background-position:18px center;
-    border-radius: 45px 45px 45px 45px;
-    width:91px;
-    height:91px;
-    transition:.3s ease;
-    margin-left:100px;
-
-    display: grid;
+    border-radius: 3rem;
+    width:5rem;
+    height:5rem;
+    margin-left:4rem;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns: 5rem 1fr;
+    justify-content:space-between;
+    align-items: center;
+    transition:.2s ease;
 }
-.shopping .card:hover{
-    width:300px;
-}
-.shopping .card:hover::after{
-    content: "Add to card";
-    position:absolute;
-    left:110px;
-    color:white;
-    font-size:1.7rem;
+.shopping .card span{
+    white-space: nowrap;
+    color:#fff;
+    font-size:1.6rem;
     font-weight:500;
 }
-
+.shopping .card img{
+    width:3rem;
+    margin-left:1.1rem;
+}
+.shopping .card:hover{
+    width:20rem;
+    cursor: pointer;
+}
