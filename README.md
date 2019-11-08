@@ -1,7 +1,16 @@
 # css-animation
+Pure CSS transitions and animations course 
 
+## Follow links to watch demos
+
+
+- <a href="https://simmoe.github.io/css-animation/01-basic-transition-transform">Introduction to transitions</a>
+- <a href="https://simmoe.github.io/css-animation/02-basic-keyframe-animation">Keyframe animation intro</a>
+- <a href="https://simmoe.github.io/css-animation/03-basic-letter-animation">CSS typewriter animation</a>
 - <a href="https://simmoe.github.io/css-animation/04-animated-sections/">Full page hover transitions</a>
 - <a href="https://simmoe.github.io/css-animation/05-animated-form-elements/">XD style form transitions</a>
+
+---
 
 CSS animation has become much more fun than in the old days. Browsers are catching up on standards, and transitions can actuallly be made estethic and subtle. In this repo you'll find a set of introductory exercises and techniques to get you started. The material was developed with high school level A informatics students in mind.
 
